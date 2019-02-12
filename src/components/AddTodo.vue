@@ -39,7 +39,8 @@ export default {
 
   input[type="text"] {
     flex: 10;
-    padding: 5px;
+    padding: 10px;
+    outline: none;
   }
 
   input[type="submit"] {

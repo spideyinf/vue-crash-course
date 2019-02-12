@@ -3,6 +3,7 @@
     <Header />
     <AddTodo v-on:add-todo="addTodo" />
     <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
+    <Counter></Counter>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Header from './components/layout/Header.vue'
 import Todos from './components/Todos.vue'
 import AddTodo from './components/AddTodo.vue'
+import Counter from './components/Counter.vue'
 import axios from 'axios'
 
 export default {
@@ -17,7 +19,8 @@ export default {
   components: {
     Header,
     Todos,
-    AddTodo
+    AddTodo,
+    Counter
   },
   data() {
     return {
@@ -36,13 +39,13 @@ export default {
         completed
       })
         .then(res => this.todos = [...this.todos, res.data])
-        .catch(err => console.log(err))
+        .catch(err => err)
     }
   },
   created() {
     axios.get('https://jsonplaceholder.typicode.com/todos?_limit=5')
       .then(res => this.todos = res.data)
-      .catch(err => console.log(err))
+      .catch(err => err)
   }
 }
 </script>
