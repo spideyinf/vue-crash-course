@@ -3,7 +3,10 @@
     <Header />
     <AddTodo v-on:add-todo="addTodo" />
     <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
-    <Counter></Counter>
+    <hr />
+    <Counter />
+    <hr />
+    <MonsterSlayer />
   </div>
 </template>
 
@@ -12,6 +15,7 @@ import Header from './components/layout/Header.vue'
 import Todos from './components/Todos.vue'
 import AddTodo from './components/AddTodo.vue'
 import Counter from './components/Counter.vue'
+import MonsterSlayer from './components/MonsterSlayer.vue'
 import axios from 'axios'
 
 export default {
@@ -20,7 +24,8 @@ export default {
     Header,
     Todos,
     AddTodo,
-    Counter
+    Counter,
+    MonsterSlayer
   },
   data() {
     return {
@@ -56,7 +61,7 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
-    margin-top: 60px;
+    margin:  0 auto 60px;
 
     .btn {
       display: inline-block;

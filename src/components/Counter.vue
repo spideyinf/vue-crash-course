@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <button v-on:click="increase">Increase</button>
     <p>{{ counter }}</p>
     <p v-on:mousemove="updateCoordinates">
@@ -7,6 +7,9 @@
       - <span v-on:mousemove.stop="">DEAD AREA</span>
     </p>
     <input type="text" v-on:keyup.enter.space="alertMe">
+    <p v-if="show">To see or not to see</p>
+    <p v-else>Now you see me</p>
+    <button @click="show = ! show">Switch</button>
   </div>
 </template>
 
@@ -18,6 +21,7 @@
         counter: 1,
         x: 0,
         y: 0,
+        show: true,
       }
     },
     methods: {
@@ -34,3 +38,12 @@
     },
   }
 </script>
+
+<style scoped>
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 768px;
+    margin: 24px auto;
+  }
+</style>
