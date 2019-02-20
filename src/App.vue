@@ -7,6 +7,8 @@
     <Counter />
     <hr />
     <MonsterSlayer />
+    <hr />
+    <VueInstance />
   </div>
 </template>
 
@@ -16,6 +18,7 @@ import Todos from './components/Todos.vue'
 import AddTodo from './components/AddTodo.vue'
 import Counter from './components/Counter.vue'
 import MonsterSlayer from './components/MonsterSlayer.vue'
+import VueInstance from './components/VueInstance.vue'
 import axios from 'axios'
 
 export default {
@@ -25,7 +28,8 @@ export default {
     Todos,
     AddTodo,
     Counter,
-    MonsterSlayer
+    MonsterSlayer,
+    VueInstance,
   },
   data() {
     return {

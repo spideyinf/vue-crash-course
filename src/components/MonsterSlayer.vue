@@ -58,6 +58,7 @@ export default {
       playerHealth: 100,
       monsterHealth: 100,
       gameIsRunning: false,
+      turns: [],
     }
   },
   methods: {
